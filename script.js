@@ -54,3 +54,28 @@ save.addEventListener("click", function(){
         section4.appendChild(score)
     }
 })
+//Made the start button functional
+start.addEventListener("click", function(){
+    section1.classList.add("hidden")
+    section2.classList.remove("hidden")
+    question.textContent = questions[counter].question;
+    choice1.textContent = questions[counter].choices[0];
+    choice2.textContent = questions[counter].choices[1];
+    choice3.textContent = questions[counter].choices[2];
+    choice4.textContent = questions[counter].choices[3];
+    counter ++
+    setTimer()
+})
+//Made the start button functional
+start.addEventListener("click", function(){
+    section1.classList.add("hidden")
+    section2.classList.remove("hidden")
+    question.textContent = questions[counter].question;
+    choice1.textContent = questions[counter].choices[0];
+    choice2.textContent = questions[counter].choices[1];
+    choice3.textContent = questions[counter].choices[2];
+    choice4.textContent = questions[counter].choices[3];
+    counter ++
+    setTimer()
+    
+    })
