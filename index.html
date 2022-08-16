@@ -1,12 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"href = "./style.css">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <div id = "section1">
+        <h2>Code Quiz</h2>
+        <p>Press Start to Begin</p>
+        <button id = "startbtn">Start</button>
+
+    </div>
+
+
+
+    <div id = "section2" class = "hidden">
+        <p id = "time">Time</p>
+        <p id = "score">Score</p>
+
+        <h3 id = "question"></h3>
+        <button id = "choice1">choice 1</button>
+        <button id = "choice2">choice 2</button>
+        <button id = "choice3">choice 3</button>
+        <button id = "choice4">choice 4</button>
+
+
+
+    </div>
+
+
+    <div id = "section3" class = "hidden">
+        <h2> Enter Your Initials</h2>
+        <input id = "initials">
+        <button id = "save">Save</button>
+
+
+    </div>
+
+
+    <div id = "section4" class = "hidden" >
+        <h2> High Scores</h2>
+        <button id = "playAgain">Play Again</button>
+
+
+    </div>
+
+
+    <script src="./script.js"></script>
 </body>
+
 </html>
