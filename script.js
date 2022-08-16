@@ -16,3 +16,23 @@ var save = document.getElementById("save");
 var timeEl = document.getElementById("time");
 var timeInterval 
 var playAgain = document.getElementById("playAgain");
+
+//Created questions for the quiz, and provided both the choices and answers in an array. 
+
+var questions = [
+    {
+      question: "What does CSS stand for?", 
+      choices: ["1.Creative Style Sheets", "2.Cascading Style Sheets", "3.Circular Style Screen", "4.Cascading Style Scripts"],
+      answer: "2.Cascading Style Sheets"
+    },
+    {
+      question: "Which of the following is not a core component of Bootstrap.", 
+      choices: ["1.container", "2.row", "3.curl", "4.column"],
+      answer: "3.content"
+    },  
+    {
+      question: "What does the splice( ) method do?", 
+      choices: ["1.changes the contents of an array by removing or replacing elements", "2.gets rid of extra space before or after a word", "3.converts a string to an object", "4.makes requests from the browser"],
+      answer: "1.changes the contents of an array by removing or replacing elements"
+    },  
+  ]
