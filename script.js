@@ -67,7 +67,7 @@ start.addEventListener("click", function(){
     setTimer()
 })
 
-//Made it possible that after the last question it would 
+//render question
 function renderQuestion(event) {
     if(counter === questions.length) { clearInterval(timeInterval);
      section2.classList.add("hidden")
@@ -89,3 +89,29 @@ choice1.addEventListener("click", renderQuestion);
 choice2.addEventListener("click", renderQuestion);
 choice3.addEventListener("click", renderQuestion);
 choice4.addEventListener("click", renderQuestion);
+
+
+//Set up the timer. 
+var secondsLeft = 30
+
+function setTimer() {
+    timeEl.textContent = secondsLeft;
+    timeInterval = setInterval(function(){
+    console.log(secondsLeft)
+    secondsLeft--;
+       timeEl.textContent = secondsLeft;
+       
+       if(secondsLeft === 0) {
+        clearInterval(timeInterval);
+         sendMessage();
+
+     }
+
+   },1000) 
+       
+
+        
+
+   }
+
+
