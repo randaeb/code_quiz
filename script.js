@@ -66,16 +66,26 @@ start.addEventListener("click", function(){
     counter ++
     setTimer()
 })
-//Made the start button functional
-start.addEventListener("click", function(){
-    section1.classList.add("hidden")
-    section2.classList.remove("hidden")
-    question.textContent = questions[counter].question;
-    choice1.textContent = questions[counter].choices[0];
-    choice2.textContent = questions[counter].choices[1];
-    choice3.textContent = questions[counter].choices[2];
-    choice4.textContent = questions[counter].choices[3];
-    counter ++
-    setTimer()
-    
-    })
+
+//Made it possible that after the last question it would 
+function renderQuestion(event) {
+    if(counter === questions.length) { clearInterval(timeInterval);
+     section2.classList.add("hidden")
+     section3.classList.remove("hidden") 
+     return
+    }  
+   console.log(counter)
+question.textContent = questions[counter].question;
+choice1.textContent = questions[counter].choices[0];
+choice2.textContent = questions[counter].choices[1];
+choice3.textContent = questions[counter].choices[2];
+choice4.textContent = questions[counter].choices[3];
+counter ++
+}
+
+
+//Made buttons for each choice option available for a question. 
+choice1.addEventListener("click", renderQuestion);
+choice2.addEventListener("click", renderQuestion);
+choice3.addEventListener("click", renderQuestion);
+choice4.addEventListener("click", renderQuestion);
