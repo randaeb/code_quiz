@@ -36,3 +36,21 @@ var questions = [
       answer: "1.changes the contents of an array by removing or replacing elements"
     },  
   ]
+  //Made the play again button functional.
+playAgain.addEventListener("click", function(){
+    window.location.reload()
+})
+//Created a button that would save the scores, and then stored them in local storage. 
+save.addEventListener("click", function(){
+    var initials = input.value 
+    var highScores = JSON.parse(localStorage.getItem("scores")) ||[ ]
+    highScores.push({initials, score:secondsLeft})
+    localStorage.setItem("scores",JSON.stringify(highScores))
+    section4.classList.remove("hidden")
+    section3.classList.add("hidden")
+    for (var i = 0; i<highScores.length; i++){
+        var score = document.createElement("p")
+        score.innerText=highScores[i].initials + " " + highScores[i].score
+        section4.appendChild(score)
+    }
+})
